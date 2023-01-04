@@ -44,7 +44,7 @@ class Home extends StatelessWidget {
              color: Colors.black
         )
       ),
-        home:  HomePage()
+        home:  const HomePage()
     );
   }
 }

@@ -12,6 +12,8 @@ class SearchPage extends StatelessWidget {
 
   final searchController = TextEditingController();
 
+  SearchPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(

@@ -44,7 +44,6 @@ class Episode{
 
   Episode({required this.air_date, required this.name, required this.season_number, required this.episode_count});
   factory Episode.fromJson(Map<String, dynamic> json){
-
     return Episode(
         air_date: json['air_date'] ?? 'Not Confirmed',
         name: json['name'] ?? '',
