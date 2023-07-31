@@ -25,6 +25,8 @@ class Test extends Equatable {
   List<Object?> get props => [seriesId, seasonNumber];
 
 
+
+
 }
 
 
