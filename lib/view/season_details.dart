@@ -29,7 +29,7 @@ class SeasonDetails extends ConsumerWidget {
             child: Container(
               child: data.when(
                   data: (data){
-                    return ListView.builder(
+                    return data.isEmpty ? Center(child: Text("Not avaiable"),) : ListView.builder(
                       physics: BouncingScrollPhysics(),
                       shrinkWrap: true,
                       itemCount: data.length,

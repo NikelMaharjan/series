@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:movie/api.dart';
 import 'package:movie/models/series.dart';
@@ -18,7 +19,7 @@ class HomePage extends StatelessWidget {
       child: SafeArea(
         child: Scaffold(
             appBar: AppBar(
-              toolbarHeight: 80,
+              toolbarHeight: 80.h,
               flexibleSpace: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12.0),
                 child: Row(
@@ -33,7 +34,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               bottom: PreferredSize(      //we use PreferredSize here just to able to wrap tabbar with consumer
-                preferredSize: const Size(double.infinity, 40),
+                preferredSize: Size(double.infinity, 40.h),
                 child: Consumer(
                   builder: (context, ref, child) {
                     return TabBar(

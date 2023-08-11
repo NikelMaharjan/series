@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_offline/flutter_offline.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/instance_manager.dart';
 import 'package:movie/common_widgets/loading_indicator.dart';
 import 'package:movie/models/series.dart';
@@ -87,8 +88,8 @@ class TabBarWidget extends StatelessWidget {
                                             Image.asset('assets/images/image.png', fit: BoxFit.fitHeight,),
                                         imageUrl: series.poster_path,
                                         fit: BoxFit.fitWidth,
-                                        height: 260,
-                                        width: 180,
+                                        height: 260.h,
+                                        width: 180.w,
                                         placeholder: (context, url) => const Center(child: LoadingIndicator()),
 
                                       ),

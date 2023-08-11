@@ -9,6 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:movie/view/home_page.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async{
 
@@ -28,23 +29,28 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
 
 
-    return GetMaterialApp(
+    return ScreenUtilInit(
+      designSize: const Size(414, 861),
+      builder: (BuildContext context, Widget? child) {
+        return GetMaterialApp(
 
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData.dark().copyWith(
 
-        textTheme: GoogleFonts.interTextTheme(
-            Theme.of(context).textTheme.apply(
-              bodyColor: Colors.white,
-              displayColor: Colors.white
+                textTheme: GoogleFonts.interTextTheme(
+                  Theme.of(context).textTheme.apply(
+                      bodyColor: Colors.white,
+                      displayColor: Colors.white
+                  ),
+                ),
+                scaffoldBackgroundColor: Colors.black,
+                appBarTheme: const AppBarTheme(
+                    color: Colors.black
+                )
             ),
-        ),
-         scaffoldBackgroundColor: Colors.black,
-         appBarTheme: const AppBarTheme(
-             color: Colors.black
-        )
-      ),
-        home:   HomePage()
+            home:   HomePage()
+        );
+      },
     );
   }
 }

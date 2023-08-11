@@ -3,6 +3,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movie/common_widgets/loading_indicator.dart';
 import 'package:movie/models/cast_detail.dart';
 import 'package:movie/providers/cast_detail_provider.dart';
@@ -30,7 +31,7 @@ class CastDetailPage extends ConsumerWidget {
                 castImages.when(
                     data: (data){
                       return SizedBox(
-                        height: 300,
+                        height: 300.h,
                         child: ListView.builder(
                           physics: const BouncingScrollPhysics(),
                           scrollDirection: Axis.horizontal,
@@ -52,10 +53,10 @@ class CastDetailPage extends ConsumerWidget {
                       );
                     },
                     error: (e,s) => SizedBox(
-                        height: 300,
+                        height: 300.h,
                         child: Center(child: Text(e.toString()))),
-                    loading: () => const SizedBox(
-                      height: 300,
+                    loading: () =>  SizedBox(
+                      height: 300.h,
                         child: LoadingIndicator())
                 ),
                 _buildCastDetails(castData),

@@ -3,6 +3,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:movie/common_widgets/loading_indicator.dart';
 import 'package:movie/providers/genre_provider.dart';
@@ -53,8 +54,8 @@ class GenrePage extends ConsumerWidget {
                                       Image.asset('assets/images/image.png', fit: BoxFit.fitHeight,),
                                   imageUrl: series.poster_path,
                                   fit: BoxFit.fitWidth,
-                                  height: 260,
-                                  width: 180,
+                                  height: 260.h,
+                                  width: 180.w,
                                   placeholder: (context, url) => const Center(child: LoadingIndicator()),
 
                                 ),

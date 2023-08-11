@@ -6,6 +6,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:movie/common_widgets/loading_indicator.dart';
 import 'package:movie/models/seasons.dart';
@@ -53,8 +54,7 @@ class DetailPage extends StatelessWidget {
       automaticallyImplyLeading: false,
       floating: true,
       pinned: true,
-      toolbarHeight: 66,
-      expandedHeight: 390,
+      expandedHeight: 380.h,
       flexibleSpace: FlexibleSpaceBar(
         titlePadding: const EdgeInsets.all(0),
         title: Container(
@@ -153,7 +153,7 @@ class DetailPage extends StatelessWidget {
                return recommendationData.when(
                    data: (data){
                      return SizedBox(
-                       height: 260,
+                       height: 260.h,
                        child: ListView.builder(
                          physics: const BouncingScrollPhysics(),
                          scrollDirection: Axis.horizontal,
@@ -166,16 +166,16 @@ class DetailPage extends StatelessWidget {
                              child: Container(
                                margin: EdgeInsets.only(right: 10, left: index == 0 ? 10 : 0),
 
-                               width: 140,
+                               width: 140.w,
                                child: Column(
                                  children: [
                                    SizedBox(
-                                     height: 200,
+                                     height: 200.h,
                                      child: Stack(
                                        children: [
                                          CachedNetworkImage(
                                            imageUrl: data[index].poster_path, fit: BoxFit.fitHeight,
-                                           errorWidget: (c,t,r) => Image.asset('assets/images/image.png', height: 240, fit: BoxFit.fitHeight,),
+                                           errorWidget: (c,t,r) => Image.asset('assets/images/image.png', height: 240.h, fit: BoxFit.fitHeight,),
                                            placeholder: (c, u) =>   const Center(child: LoadingIndicator(),),
                                          ),
                                          Positioned(
@@ -196,7 +196,7 @@ class DetailPage extends StatelessWidget {
 
                                    Padding(
                                      padding: const EdgeInsets.symmetric(vertical: 8.0),
-                                     child: Text(data[index].name, overflow: TextOverflow.ellipsis,),
+                                     child: Text(data[index].name, overflow: TextOverflow.ellipsis, style: TextStyle(color: Colors.red),),
                                    ),
                                  ],
                                ),
@@ -224,7 +224,7 @@ class DetailPage extends StatelessWidget {
                return videoData.when(
                    data: (data){
                      return SizedBox(
-                       height: 230,
+                       height: 230.h,
                        child: ListView.separated(
                          separatorBuilder: (BuildContext context, int index) {
                            return const VerticalDivider(
@@ -242,7 +242,7 @@ class DetailPage extends StatelessWidget {
                            return Padding(
                              padding: const EdgeInsets.all(8.0),
                              child: SizedBox(
-                               width: 320,
+                               width: 320.w,
                                child: Column(
                                  children: [
                                    Container(margin: const EdgeInsets.only(left: 10),child: Text(data[index].name, overflow: TextOverflow.ellipsis,)),
@@ -354,7 +354,7 @@ class DetailPage extends StatelessWidget {
 
   Widget _buildNetworkData(Season data) {
     return SizedBox(
-                    height: 66,
+                    height: 66.h,
                     child: ListView.separated(
                       physics: const BouncingScrollPhysics(),
                       scrollDirection: Axis.horizontal,
@@ -369,7 +369,7 @@ class DetailPage extends StatelessWidget {
                                    Get.to(NetworkInfoPage(data.networks[index].id));
                                 },
                                 child: SizedBox(
-                                  height: 30,
+                                  height: 30.h,
                                   child: CachedNetworkImage(
                                     imageUrl: data.networks[index].logo_path, color: Colors.red,
                                     errorWidget: (c,t,r) => Image.asset('assets/images/image.png', fit: BoxFit.fitHeight,),
@@ -442,7 +442,7 @@ class DetailPage extends StatelessWidget {
           return seasonData.when(
               data: (data){
                 return Container(
-                  height: 180,
+                  height: 180.h,
                   child: ListView.builder(
                     physics: const BouncingScrollPhysics(),
                     scrollDirection: Axis.horizontal,
@@ -454,13 +454,14 @@ class DetailPage extends StatelessWidget {
                           Get.to(() => CastDetailPage(id: data[index].id), transition: Transition.leftToRight);
                         },
                         child: Container(
-                          width: 100,
+                          margin: EdgeInsets.only(left: 10),
+                          width: 100.w,
                           child: Column(
                             children: [
                               ClipRRect(
                                 borderRadius: const BorderRadius.all(Radius.circular(10)),
                                 child: CachedNetworkImage(
-                                  imageUrl: data[index].profile_path, height: 140,
+                                  imageUrl: data[index].profile_path, height: 140.h,
                                   errorWidget: (c,t,r) => Image.asset('assets/images/image.png', fit: BoxFit.fitHeight,),
                                   placeholder: (c, u) =>  LoadingIndicator(),
                                 ),
