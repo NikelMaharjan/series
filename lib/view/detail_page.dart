@@ -196,7 +196,7 @@ class DetailPage extends StatelessWidget {
 
                                    Padding(
                                      padding: const EdgeInsets.symmetric(vertical: 8.0),
-                                     child: Text(data[index].name, overflow: TextOverflow.ellipsis, style: TextStyle(color: Colors.red),),
+                                     child: Text(data[index].name, overflow: TextOverflow.ellipsis, style: const TextStyle(color: Colors.red),),
                                    ),
                                  ],
                                ),
@@ -441,7 +441,7 @@ class DetailPage extends StatelessWidget {
           final seasonData = ref.watch(castProvider(series.id));
           return seasonData.when(
               data: (data){
-                return Container(
+                return SizedBox(
                   height: 180.h,
                   child: ListView.builder(
                     physics: const BouncingScrollPhysics(),
@@ -454,7 +454,7 @@ class DetailPage extends StatelessWidget {
                           Get.to(() => CastDetailPage(id: data[index].id), transition: Transition.leftToRight);
                         },
                         child: Container(
-                          margin: EdgeInsets.only(left: 10),
+                          margin: const EdgeInsets.only(left: 10),
                           width: 100.w,
                           child: Column(
                             children: [
@@ -463,7 +463,7 @@ class DetailPage extends StatelessWidget {
                                 child: CachedNetworkImage(
                                   imageUrl: data[index].profile_path, height: 140.h,
                                   errorWidget: (c,t,r) => Image.asset('assets/images/image.png', fit: BoxFit.fitHeight,),
-                                  placeholder: (c, u) =>  LoadingIndicator(),
+                                  placeholder: (c, u) =>  const LoadingIndicator(),
                                 ),
                               ),
                               Padding(

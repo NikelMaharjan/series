@@ -9,17 +9,15 @@ class SeasonDetails extends ConsumerWidget {
 
   final int seriesID, seasonNumber;
 
-  SeasonDetails({required this.seriesID, required this.seasonNumber});
+  SeasonDetails({super.key, required this.seriesID, required this.seasonNumber});
 
 
 
 
   @override
   Widget build(BuildContext context, ref) {
-    print(seasonNumber);
 
     final data = ref.watch(seasonDetailProvider(Test(seriesId: seriesID, seasonNumber: seasonNumber)));
-    print(data);
     return SafeArea(
       child: Scaffold(
 
@@ -29,8 +27,8 @@ class SeasonDetails extends ConsumerWidget {
             child: Container(
               child: data.when(
                   data: (data){
-                    return data.isEmpty ? Center(child: Text("Not avaiable"),) : ListView.builder(
-                      physics: BouncingScrollPhysics(),
+                    return data.isEmpty ? const Center(child: Text("Not avaiable"),) : ListView.builder(
+                      physics: const BouncingScrollPhysics(),
                       shrinkWrap: true,
                       itemCount: data.length,
                         itemBuilder: (context, index){
@@ -40,7 +38,7 @@ class SeasonDetails extends ConsumerWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(data[index].name, style: TextStyle(fontSize: 16, color: Colors.red, fontWeight: FontWeight.bold),),
+                              Text(data[index].name, style: const TextStyle(fontSize: 16, color: Colors.red, fontWeight: FontWeight.bold),),
                               Padding(
                                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                                 child: Row(
@@ -61,7 +59,7 @@ class SeasonDetails extends ConsumerWidget {
                     );
                   },
                   error: (e, s) => Center(child: Text(e.toString()),),
-                  loading: () => Center(child: LoadingIndicator(),)
+                  loading: () => const Center(child: LoadingIndicator(),)
               ),
             ),
           ),

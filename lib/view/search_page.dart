@@ -2,10 +2,8 @@
 
 
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:movie/models/series.dart';
 import 'package:movie/providers/search_provider.dart';
 import 'package:movie/view/widgets/tab_bar_widget.dart';
 

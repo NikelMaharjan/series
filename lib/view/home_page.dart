@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:movie/api.dart';
-import 'package:movie/models/series.dart';
 import 'package:movie/providers/series_provider.dart';
 import 'package:movie/view/search_page.dart';
 import 'package:movie/view/widgets/tab_bar_widget.dart';
@@ -11,6 +10,8 @@ import 'package:movie/view/widgets/tab_bar_widget.dart';
 
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
 
   @override
   Widget build(BuildContext context) {

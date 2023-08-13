@@ -13,13 +13,12 @@ class CastDetailPage extends ConsumerWidget {
 
   int id;
 
-  CastDetailPage({required this.id});
+  CastDetailPage({super.key, required this.id});
 
 
 
   @override
   Widget build(BuildContext context, ref) {
-    print(id);
     final castData = ref.watch(castDetailProvider(id));
     final castImages = ref.watch(castImageProvider(id));
     return SafeArea(
@@ -57,7 +56,7 @@ class CastDetailPage extends ConsumerWidget {
                         child: Center(child: Text(e.toString()))),
                     loading: () =>  SizedBox(
                       height: 300.h,
-                        child: LoadingIndicator())
+                        child: const LoadingIndicator())
                 ),
                 _buildCastDetails(castData),
 

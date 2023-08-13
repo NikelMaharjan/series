@@ -11,7 +11,7 @@ import 'package:url_launcher/url_launcher.dart';
 class NetworkInfoPage extends ConsumerWidget {
 
   final int id;
-  NetworkInfoPage(this.id);
+  const NetworkInfoPage(this.id, {super.key});
 
   @override
   Widget build(BuildContext context, ref) {

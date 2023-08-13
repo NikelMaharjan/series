@@ -14,12 +14,11 @@ class GenrePage extends ConsumerWidget {
 
 
   int id;
-  GenrePage(this.id);
+  GenrePage(this.id, {super.key});
 
 
   @override
   Widget build(BuildContext context, ref) {
-    print("id is $id");
     final data = ref.watch(genreProvider(id));
     return SafeArea(
       child: Scaffold(
@@ -40,7 +39,6 @@ class GenrePage extends ConsumerWidget {
                       final series = data[index];
                       return InkWell(
                         onTap: () {
-                          print(series.id);
                           Get.to(DetailPage(series),
                               transition: Transition.leftToRight);
                         },
