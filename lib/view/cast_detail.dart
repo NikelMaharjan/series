@@ -1,5 +1,3 @@
-
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -12,10 +10,7 @@ import 'package:movie/providers/cast_image_provider.dart';
 class CastDetailPage extends ConsumerWidget {
 
   int id;
-
   CastDetailPage({super.key, required this.id});
-
-
 
   @override
   Widget build(BuildContext context, ref) {

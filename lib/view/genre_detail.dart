@@ -12,7 +12,6 @@ import 'detail_page.dart';
 
 class GenrePage extends ConsumerWidget {
 
-
   int id;
   GenrePage(this.id, {super.key});
 

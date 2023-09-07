@@ -2,10 +2,6 @@
 
 
 
-
-
-
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movie/models/series.dart';
 import 'package:movie/services/series_service.dart';
@@ -20,15 +16,6 @@ class RecommendationProvider  {
     final data = await SeriesService.getSeriesRecommendations(id: id);
     return data.fold((l) => throw(l), (r) => r);
 
-
-
-
 }
-
-
-
-
-
-
 
 }

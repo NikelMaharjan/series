@@ -1,8 +1,4 @@
 
-
-
-
-
 class Cast {
 
   final String name;
@@ -22,12 +18,5 @@ class Cast {
         character: json['character'] ?? ''
     );
   }
-
-
-
-
-
-
-
 
 }

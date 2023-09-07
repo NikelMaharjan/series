@@ -1,10 +1,5 @@
 
-
-
 class CastDetail {
-
-
-
 
   final String biography;
   final String birthday;
@@ -15,8 +10,6 @@ class CastDetail {
 
 
   CastDetail({required this.biography, required this.birthday, required this.gender, required this.name, required this.place_of_birth, required this.profile_path});
-
-
 
   factory CastDetail.fromJson (Map<String, dynamic> json){
 

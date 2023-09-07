@@ -1,7 +1,4 @@
 
-
-
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movie/api.dart';
 import 'package:movie/models/series_state.dart';

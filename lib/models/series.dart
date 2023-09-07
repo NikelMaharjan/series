@@ -8,7 +8,6 @@ enum Categories{
 }
 
 
-
 class Series{
 
   final String name;
@@ -34,11 +33,6 @@ class Series{
     required this.first_air_date
     
   });
-
-
-
-
-
 
   factory Series.fromJson (Map <String, dynamic> json){
     return Series(

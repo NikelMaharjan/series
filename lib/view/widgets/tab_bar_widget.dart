@@ -1,12 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_offline/flutter_offline.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/instance_manager.dart';
 import 'package:movie/common_widgets/loading_indicator.dart';
-import 'package:movie/models/series.dart';
 import 'package:movie/providers/search_provider.dart';
 import 'package:movie/providers/series_provider.dart';
 import 'package:get/get.dart';
@@ -25,7 +23,7 @@ class TabBarWidget extends StatelessWidget {
 
   final bool isSearchPage;
 
-  TabBarWidget(this.isSearchPage);
+  const TabBarWidget(this.isSearchPage, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -74,9 +72,7 @@ class TabBarWidget extends StatelessWidget {
                             final series = seriesData.series[index];
                             return InkWell(
                               onTap: () {
-                                print(series.id);
-                                Get.to(DetailPage(series),
-                                    transition: Transition.leftToRight);
+                                Get.to(DetailPage(series), transition: Transition.leftToRight);
                               },
                               child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),

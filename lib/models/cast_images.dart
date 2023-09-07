@@ -1,11 +1,8 @@
 
 
-
-
 class CastImages {
 
   final String file_path;
-
 
   CastImages({required this.file_path});
 
@@ -18,6 +15,5 @@ class CastImages {
     );
 
   }
-
 
 }

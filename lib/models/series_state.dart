@@ -4,7 +4,6 @@ import 'package:movie/api.dart';
 import 'package:movie/models/series.dart';
 
 
-
 class SeriesState{
 
   final String errText;
@@ -19,8 +18,8 @@ class SeriesState{
 
 
   SeriesState.initState() : errText = '', series = [], apiPath = Api.getPopularSeries, page =1, isloadMore = false, isLoad = false;
-  SeriesState.initState1() : errText = '', series = [], apiPath = Api.getTopRatedSeries, page =1, isloadMore = false, isLoad = false;
-  SeriesState.initState2() : errText = '', series = [], apiPath = Api.getAiringSeries, page =1, isloadMore = false, isLoad = false;
+ // SeriesState.initState1() : errText = '', series = [], apiPath = Api.getTopRatedSeries, page =1, isloadMore = false, isLoad = false;
+ // SeriesState.initState2() : errText = '', series = [], apiPath = Api.getAiringSeries, page =1, isloadMore = false, isLoad = false;
 
 
   SeriesState copyWith({String? errText, List<Series>? series, bool? isLoad, String? apiPath, int? page, bool? isloadMore}){

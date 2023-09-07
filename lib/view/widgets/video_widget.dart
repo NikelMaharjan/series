@@ -1,14 +1,13 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:movie/models/series.dart';
 import 'package:pod_player/pod_player.dart';
 
 class VideoWidget extends StatefulWidget {
 
 
   final String id;
-  VideoWidget(this.id);
+  const VideoWidget(this.id, {super.key});
 
   @override
   State<VideoWidget> createState() => _VideoWidgetState();

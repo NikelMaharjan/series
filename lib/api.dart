@@ -5,7 +5,6 @@ class Api{
 
   static const String baseurl = 'https://api.themoviedb.org/3';
 
-
   static const String getPopularSeries = '$baseurl/trending/tv/day';
   static const String getTopRatedSeries = '$baseurl/tv/top_rated';
   static const String getAiringSeries = '$baseurl/tv/on_the_air';
@@ -19,14 +18,6 @@ class Api{
   static const String getCastData = '$baseurl/tv/';
   static const String getCastImages = '$baseurl/person';
   static const String getSeasonDetails = '$baseurl/tv';
-
-
-
-
-
-
-
-
 
 
 }

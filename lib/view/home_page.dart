@@ -8,7 +8,6 @@ import 'package:movie/view/search_page.dart';
 import 'package:movie/view/widgets/tab_bar_widget.dart';
 
 
-
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 

@@ -3,7 +3,6 @@
 
 class NetworkInfo{
 
-
   final String headquarters;
   final String homepage;
   final int id;

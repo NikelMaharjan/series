@@ -1,7 +1,4 @@
 
-
-
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movie/services/series_service.dart';
 

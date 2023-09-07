@@ -1,6 +1,4 @@
 
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -48,7 +46,7 @@ class Home extends StatelessWidget {
                     color: Colors.black
                 )
             ),
-            home:   HomePage()
+            home:   const HomePage()
         );
       },
     );

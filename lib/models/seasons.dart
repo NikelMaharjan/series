@@ -18,7 +18,6 @@ class Season{
 
     );
   }
-
 }
 
 

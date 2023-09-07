@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 import 'package:equatable/equatable.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/get.dart';
@@ -30,13 +23,9 @@ class Test extends Equatable {
 }
 
 
-//final seasonDetailProvider =  FutureProvider.family((ref, int seriesId, int seasonNumber) => SeasonDetailProvider.getSeasonDetails(seriesID: seriesID, seasonNumber: seasonNumber));
-
-
 final seasonDetailProvider =  FutureProvider.family.autoDispose((ref, Test test) => SeasonDetailProvider.getSeasonDetails(seriesID: test.seriesId, seasonNumber: test.seasonNumber));
 
 class SeasonDetailProvider {
-
 
   static Future<List<SeasonDetails>> getSeasonDetails ({required int seriesID, required seasonNumber}) async {
 

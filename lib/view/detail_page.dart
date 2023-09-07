@@ -411,7 +411,6 @@ class DetailPage extends StatelessWidget {
                     direction: Axis.horizontal,
                     children: data.genres.map((i) => InkWell(
                        onTap: (){
-                         print(i.id);
                          Get.to(() => GenrePage(i.id));
                        },
                         child: Padding(

@@ -5,14 +5,7 @@ import 'package:movie/models/series_state.dart';
 import '../services/series_service.dart';
 
 
-
-
-
-
-
 final seriesProvider = StateNotifierProvider<SeriesProvider, SeriesState>((ref) => SeriesProvider(SeriesState.initState()));
-
-//use multiple provider here.. since single provider already done in movie_app_tabbar
 
 
 class SeriesProvider extends StateNotifier<SeriesState>{

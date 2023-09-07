@@ -1,7 +1,6 @@
 
 
 import 'dart:convert';
-
 import 'package:hive/hive.dart';
 import 'package:movie/api.dart';
 import 'package:movie/exceptions/api_exception.dart';
@@ -12,7 +11,6 @@ import 'package:movie/models/networks.dart';
 import 'package:movie/models/seasons.dart';
 import 'package:movie/models/seasons_details.dart';
 import 'package:movie/models/videos.dart';
-
 import '../models/series.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';

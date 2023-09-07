@@ -11,9 +11,6 @@ class SeasonDetails extends ConsumerWidget {
 
   SeasonDetails({super.key, required this.seriesID, required this.seasonNumber});
 
-
-
-
   @override
   Widget build(BuildContext context, ref) {
 

@@ -10,7 +10,6 @@ final String overview;
 final int runtime;
 
 
-
 SeasonDetails({required this.air_date, required this.episode_number, required this.name, required this.overview, required this.runtime});
 
 
